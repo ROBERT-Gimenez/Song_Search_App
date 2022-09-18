@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import SongDetail from './SongDetail';
+import SongForm from './SongForm';
 
 const SongSearch = () => {
     const [search ,setSearch] = useState(null);
@@ -8,6 +10,8 @@ const SongSearch = () => {
   return (
     <div>
         <h2>SongSearch</h2>
+        <SongForm/>
+        <SongDetail/>
     </div>
   )
 };
