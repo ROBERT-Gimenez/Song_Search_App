@@ -5,15 +5,20 @@ import SongForm from './SongForm';
 
 const SongSearch = () => {
     const [search ,setSearch] = useState(null);
-    const [lyris ,setLyris] = useState(null);
+    const [lyric ,setLyric] = useState(null);
     const [bio ,setBio] = useState(null);
     const [loading ,setLoading] = useState(false);
+
+    const handleSearch = (data) => {
+        console.log(data)
+    }
+
   return (
     <div>
         <h2>SongSearch</h2>
         {loading &&<Loader/>}
-        <SongForm/>
-        <SongDetail/>
+        <SongForm handleSearch={handleSearch} />
+        <SongDetail search={search} lyric={lyric} bio={bio}/>
     </div>
   )
 };
