@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Loader from './Loader';
 import SongDetail from './SongDetail';
 import SongForm from './SongForm';
 
@@ -10,6 +11,7 @@ const SongSearch = () => {
   return (
     <div>
         <h2>SongSearch</h2>
+        {loading &&<Loader/>}
         <SongForm/>
         <SongDetail/>
     </div>
