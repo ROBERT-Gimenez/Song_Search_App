@@ -43,7 +43,10 @@ const SongSearch = () => {
         <h2>SongSearch</h2>
         {loading &&<Loader/>}
         <SongForm handleSearch={handleSearch} />
+        {search && !loading && (
         <SongDetail search={search} lyric={lyric} bio={bio}/>
+
+        )}
     </div>
   )
 };
