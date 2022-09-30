@@ -25,26 +25,33 @@ const handleSubmit = (e) => {
 }
 
   return (
-    <div>
+    <div className='control' >
         <h2>Formulario</h2>
         <form onSubmit={handleSubmit}>
-            <input 
+            <div className='field'>
+            <input className='control is-loading 20px'
             type="text" 
             name="artist" 
             placeholder="Nombre del interptrete" 
             onChange={handleChange}
             value={form.artist}
             />
-            <input type="text"
+            </div>
+            <div className='field'> 
+            <input className='control is-loading'
+            type="text"
             name="song" 
             placeholder="Nombre de la cancion" 
             onChange={handleChange}
             value={form.song}
-             />
-            <input type="submit" value="Enviar" />
+            />
+            </div>
+            <div className="field">
+            <input className='button is-primary' type="submit" value="Enviar" />
+            </div>
         </form>
     </div>
   )
 }
 
-export default SongForm
+export default SongForm;

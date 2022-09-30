@@ -40,13 +40,14 @@ const SongSearch = () => {
 
   return (
     <div>
-        <h2>SongSearch</h2>
-        {loading &&<Loader/>}
+        <h2 className='title is-2'>SongSearch</h2>
+        <article className="grid-1-3">
         <SongForm handleSearch={handleSearch} />
+        {loading && <Loader />}
         {search && !loading && (
-        <SongDetail search={search} lyric={lyric} bio={bio}/>
-
+          <SongDetail search={search} lyric={lyric} bio={bio} />
         )}
+      </article>
     </div>
   )
 };
